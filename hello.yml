@@ -1,0 +1,14 @@
+---
+- name: Hello Dosto
+  hosts: servers
+  become: yes
+
+  vars:
+    name: shubham
+
+  tasks:
+    - name: Greet User
+      command:
+        argv:
+          - echo
+          - "Hello {{ name }}"
